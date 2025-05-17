@@ -1,0 +1,267 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#F6ECD8"
+android:padding="16dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Tracking"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#6D250E"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Order ID -->
+    <TextView
+        android:id="@+id/textViewOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order ID: ORD12345"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#6D250E"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Total Amount -->
+    <TextView
+        android:id="@+id/textViewTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount: $0.00"  />
+
+    <!-- Process Graph -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+        <!-- Step 1: Order Placed -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Circle background with ImageView -->
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center">
+
+                <!-- Circular background for completed step -->
+                <View
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/circle_background"
+                    />
+
+                <!-- Order Placed Icon -->
+                <ImageView
+                    android:id="@+id/ic_order_placed"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Order Placed"
+                    android:src="@drawable/ic_order_placed"
+                    android:layout_gravity="center"
+                    />
+            </FrameLayout>
+
+            <!-- Label for Order Placed -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Placed"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+        <!-- Line between steps -->
+        <View
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:background="#6D250E"
+            android:layout_marginHorizontal="8dp" />
+
+        <!-- Step 2: Preparing -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_preparing"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Preparing"
+                android:src="@drawable/ic_preparing"/>
+            <!--android:tint="#9C6735"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preparing"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Line between steps -->
+        <View
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:background="#6D250E"
+            android:layout_marginHorizontal="8dp" />
+
+        <!-- Step 3: Out for Delivery -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_out_for_delivery"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Out for Delivery"
+                android:src="@drawable/ic_out_for_delivery"/>
+            <!--android:tint="#9C6735"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Out for Delivery"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Line between steps -->
+        <View
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:background="#6D250E"
+            android:layout_marginHorizontal="8dp" />
+
+        <!-- Step 4: Delivered -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_delivered"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Delivered"
+                android:src="@drawable/ic_delivered" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivered"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Estimated Arrival Time -->
+    <TextView
+        android:id="@+id/textViewEstimatedArrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estimated Arrival: 45 minutes"
+        android:textSize="16sp"
+        android:textColor="#6D250E"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Driver Info -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Driver Picture -->
+            <ImageView
+                android:id="@+id/imageViewDriver"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_driver"
+                android:contentDescription="Driver Picture"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Driver Details -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textViewDriverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver: Mohammed"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#6D250E" />
+
+                <TextView
+                    android:id="@+id/textViewDriverPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone: +966503256786"
+                    android:textSize="16sp"
+                    android:textColor="#9C6735"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Button to Go to Main Page -->
+    <Button
+        android:id="@+id/buttonMainPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Main Page"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#6D250E"
+        android:layout_marginTop="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/supportBtn"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/support" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

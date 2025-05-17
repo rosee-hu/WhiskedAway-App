@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6ECD8"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/signOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="120dp"
+        android:backgroundTint="#9C6735"
+        android:text="Sign out" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/admin_dashboard_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin Dashboard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#6D250E"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="30dp" />
+
+    <!-- Manage Orders Button -->
+    <Button
+        android:id="@+id/btn_manage_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#9C6735"
+        android:text="Manage Orders"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <!-- Edit Products Button -->
+    <Button
+        android:id="@+id/btn_edit_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#9C6735"
+        android:text="Edit Products"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <!-- Customer Management Button -->
+    <Button
+        android:id="@+id/btn_customer_management"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer Management"
+        android:backgroundTint="#9C6735"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+</LinearLayout>

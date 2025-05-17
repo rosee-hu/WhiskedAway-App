@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6ECD8"
+    android:padding="16dp">
+
+    <!-- Check Out Title -->
+    <TextView
+        android:id="@+id/textViewCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Out"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#6D250E"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Total Amount (Positioned at the top) -->
+    <TextView
+        android:id="@+id/textViewTotalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Amount: $0.00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#6D250E"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Find My Location Button -->
+    <Button
+        android:id="@+id/buttonFindLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find My Location"
+        android:backgroundTint="#6D250E"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Location Display (Centered in the middle of the page) -->
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location: Not Available"
+        android:textSize="16sp"
+        android:textColor="#6D250E"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Choose Payment Method -->
+    <TextView
+        android:id="@+id/textViewChoosePaymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Payment Method"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#6D250E"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Payment Method Options -->
+    <RadioGroup
+        android:id="@+id/radioGroupPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:textColor="#6D250E" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card"
+            android:textColor="#6D250E" />
+    </RadioGroup>
+
+    <!-- Card Information (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/layoutCardInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp">
+
+        <!-- Card Number Input -->
+        <EditText
+            android:id="@+id/editTextCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Number"
+            android:inputType="number"
+            android:maxLength="16"
+            android:backgroundTint="#9C6735"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Expiry Date Input -->
+        <EditText
+            android:id="@+id/editTextExpiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="MM/YY"
+            android:inputType="text"
+            android:backgroundTint="#9C6735"
+            android:layout_marginBottom="16dp" />
+
+        <!-- CVV Input -->
+        <EditText
+            android:id="@+id/editTextCVV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CVV"
+            android:inputType="number"
+            android:maxLength="3"
+            android:backgroundTint="#9C6735"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+    <!-- Place Order Button -->
+    <Button
+        android:id="@+id/buttonPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6D250E"
+        android:text="Place Order"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
